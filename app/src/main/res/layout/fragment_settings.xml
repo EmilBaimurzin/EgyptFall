@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="@drawable/background02"
+    android:layout_height="match_parent">
+
+    <com.egypt.game.core.library.CustomImageButton
+        android:id="@+id/home"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_margin="10dp"
+        android:src="@drawable/home"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="270dp"
+        android:layout_height="400dp"
+        android:background="@drawable/settengs04"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/centerImg"
+            android:layout_width="120dp"
+            android:layout_height="220dp"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/background03"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.egypt.game.core.library.CustomImageButton
+            android:id="@+id/buttonLeft"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/arrow"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintBottom_toBottomOf="@+id/centerImg"
+            app:layout_constraintEnd_toStartOf="@+id/centerImg"
+            app:layout_constraintTop_toTopOf="@+id/centerImg" />
+
+        <com.egypt.game.core.library.CustomImageButton
+            android:id="@+id/buttonRight"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:rotationY="180"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/arrow"
+            app:layout_constraintBottom_toBottomOf="@+id/centerImg"
+            app:layout_constraintStart_toEndOf="@+id/centerImg"
+            app:layout_constraintTop_toTopOf="@+id/centerImg" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.egypt.game.core.library.CustomImageButton
+        android:id="@+id/close"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="-10dp"
+        android:src="@drawable/close"
+        app:layout_constraintEnd_toEndOf="@+id/constraintLayout"
+        app:layout_constraintTop_toTopOf="@+id/constraintLayout" />
+
+    <com.egypt.game.core.library.CustomImageButton
+        android:id="@+id/confirm"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:src="@drawable/tick"
+        app:layout_constraintBottom_toBottomOf="@+id/constraintLayout"
+        app:layout_constraintEnd_toEndOf="@+id/constraintLayout"
+        app:layout_constraintStart_toStartOf="@+id/constraintLayout"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

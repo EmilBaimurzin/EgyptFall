@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/fragmentMain">
+
+    <fragment
+        android:id="@+id/fragmentMain"
+        android:name="com.egypt.game.ui.before.FragmentBeforeGame"
+        android:label="FragmentMain" >
+        <action
+            android:id="@+id/action_fragmentMain_to_fragmentEgypt"
+            app:destination="@id/fragmentEgypt" />
+        <action
+            android:id="@+id/action_fragmentMain_to_fragmentSettings"
+            app:destination="@id/fragmentSettings" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentEgypt"
+        android:name="com.egypt.game.ui.egypt.FragmentEgypt"
+        android:label="FragmentEgypt" >
+        <action
+            android:id="@+id/action_fragmentEgypt_to_dialogGameOver"
+            app:destination="@id/dialogGameOver" />
+        <action
+            android:id="@+id/action_fragmentEgypt_to_fragmentSettings"
+            app:destination="@id/fragmentSettings" />
+    </fragment>
+    <dialog
+        android:id="@+id/dialogGameOver"
+        android:name="com.egypt.game.ui.dialogs.DialogGameOver"
+        android:label="DialogGameOver" >
+        <argument
+            android:name="scores"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_dialogGameOver_to_fragmentSettings"
+            app:destination="@id/fragmentSettings" />
+    </dialog>
+    <fragment
+        android:id="@+id/fragmentSettings"
+        android:name="com.egypt.game.ui.settings.FragmentSettings"
+        android:label="FragmentSettings" >
+        <argument
+            android:name="isDialog"
+            app:argType="boolean" />
+    </fragment>
+</navigation>
